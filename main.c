@@ -5,9 +5,10 @@
 
 #define HEIGHT 80
 #define WIDTH 600
-#define MAX_LEN 20
+#define MAX_LEN 30
 
 int main(){
+	SetTraceLogLevel(LOG_NONE);
 	InitWindow(WIDTH, HEIGHT, "BEAM");
 	SetConfigFlags(FLAG_WINDOW_TRANSPARENT | FLAG_WINDOW_UNDECORATED);
 	SetTargetFPS(60); 
@@ -34,6 +35,7 @@ int main(){
 				input[0] = '>';
 				input[1] = '\0';
 				length = 1;
+				CloseWindow();
             }
         }else {
             int key = GetCharPressed();
